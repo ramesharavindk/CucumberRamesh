@@ -1,0 +1,19 @@
+#Author: Ramesh
+@tag
+Feature: To validate Insurance Register
+
+  @tag2
+  Scenario Outline: Register Insurance
+    Given The user is in insurance register page
+    When The user fill all insurance details "<user_title>","<user_firstname>","<user_surname>","<user_phone>","<user_dateofbirth_1i>","<user_dateofbirth_2i>","<user_dateofbirth_3i>","<user_licenceperiod>","<user_occupation_id>","<user_address_attributes_street>","<user_address_attributes_city>","<user_address_attributes_county>","<user_address_attributes_postcode>","<user_user_detail_attributes_email>","<user_user_detail_attributes_password>","<user_user_detail_attributes_password_confirmation>"
+    And The user clicks the create button
+    Then The user should see the message insurance created
+
+    Examples: 
+      | user_title | user_firstname | user_surname | user_phone | user_dateofbirth_1i | user_dateofbirth_2i | user_dateofbirth_3i | user_licenceperiod | user_occupation_id | user_address_attributes_street | user_address_attributes_city | user_address_attributes_county | user_address_attributes_postcode | user_user_detail_attributes_email | user_user_detail_attributes_password | user_user_detail_attributes_password_confirmation |
+      | Mr         | Ramesh1        | R1           | 9876543210 |                1935 | January             |                  12 |                 12 | Actor              | Chennai                        | Coimbatore                   | India                          |                           641208 | ramesh1@gmail.com                 | rram123am@                           | rram123am@                                        |
+      | Mrs        | Ramesh2        | R2           | 9876543210 |                1935 | January             |                  12 |                 12 | Actor              | Chennai                        | Coimbatore                   | India                          |                           641208 | ramesh1@gmail.com                 | rram123am@                           | rram123am@                                        |
+      | Miss       | Ramesh2        | R2           | 9876543210 |                1935 | January             |                  12 |                 12 | Actor              | Chennai                        | Coimbatore                   | India                          |                           641208 | ramesh1@gmail.com                 | rram123am@                           | rram123am@                                        |
+      | Ms         | Ramesh2        | R2           | 9876543210 |                1935 | January             |                  12 |                 12 | Actor              | Chennai                        | Coimbatore                   | India                          |                           641208 | ramesh1@gmail.com                 | rram123am@                           | rram123am@                                        |
+      | Doctor     | Ramesh2        | R2           | 9876543210 |                1935 | January             |                  12 |                 12 | Actor              | Chennai                        | Coimbatore                   | India                          |                           641208 | ramesh1@gmail.com                 | rram123am@                           | rram123am@                                        |
+      | Captain    | Ramesh2        | R2           | 9876543210 |                1935 | January             |                  12 |                 12 | Actor              | Chennai                        | Coimbatore                   | India                          |                           641208 | ramesh1@gmail.com                 | rram123am@                           | rram123am@                                        |
